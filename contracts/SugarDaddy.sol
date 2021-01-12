@@ -27,7 +27,7 @@ contract SugarDaddy {
         ) public {
 
         depositCollateral(_flashAsset, address(this), _depositAmount);
-        setUserUseReserveAsCollateral(_flashAsset);
+        //setUserUseReserveAsCollateral(_flashAsset); no longer required as this is called as part of depositing on V2
         approveDebtIncuree(_sugarbaby, _delegateAmount, _debtAsset);
     }
 
