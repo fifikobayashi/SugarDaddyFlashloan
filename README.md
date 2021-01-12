@@ -9,6 +9,9 @@ You instead atomically INCUR the debt repayment onto someone else (the SugarDadd
 
 ![](https://github.com/fifikobayashi/SugarDaddyFlashloan/blob/main/SugarDaddyOverview_.PNG)
 
+> Update: The Aave folks reached out to note that the call to setUserUseReserveAsCollateral() is redundant in V2 as it is called as part of the depositing process where appropriate. Code, diagram and readme updated.
+
+
 ## Execution Flow
 From a technical perspective, the sequence of events are as follows:
 1. The Sugarbaby and Sugardaddy both deploy their respective contracts
