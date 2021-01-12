@@ -1,0 +1,44 @@
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env
+.env.test
+
+# Truffle contract build files
+build/contracts
+
+# Temp & IDE files
+.vscode/
+*~
+*.swp
+*.swo
+
+# Buidler files
+cache
+artifacts
+node_modules/
+output/
+
+# Truffle files
+.infuraKey
+.secret
+keys/
+build/
+
+# Solidity-coverage
+coverage/
+.coverage_contracts/
+coverage.json
+
+# Yarn
+yarn-error.log
+
+# NPM
+package-lock.json
+
+# Crytic
+crytic-export/

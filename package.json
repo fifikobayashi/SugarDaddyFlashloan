@@ -1,0 +1,24 @@
+{
+  "name": "SugarDaddyFlashloan",
+  "version": "0.0.1",
+  "description": "Leverages Aave V2's credit delegation functionalities to execute a V2 flashloan where the repayment of the loan at the end of the Tx is incurred onto a separate entity (the sugardaddy)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "fifikobayashi",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^3.2.1",
+    "ethers": "^5.0.24",
+    "hardhat": "^2.0.7"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}
