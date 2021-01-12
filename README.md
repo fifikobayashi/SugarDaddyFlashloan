@@ -7,7 +7,7 @@ From a high level perspective, you're essentially leveraging Aave V2's native cr
 
 You instead atomically INCUR the debt repayment onto someone else (the SugarDaddy), whereby the repayment is tokenized onto the Sugardaddy in the form of a collateralized debt obligation (not to be confused with a wallstreet CDO), allowing you to 'settle' your flash loan and be on your merry ways, while daddy can pay it off in subsequent blocks.
 
-![](https://github.com/fifikobayashi/SugarDaddyFlashloan/blob/main/SugarDaddyOverview.PNG)
+![](https://github.com/fifikobayashi/SugarDaddyFlashloan/blob/main/SugarDaddyOverview_.PNG)
 
 ## Execution Flow
 From a technical perspective, the sequence of events are as follows:
