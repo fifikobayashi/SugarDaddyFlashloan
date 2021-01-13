@@ -70,6 +70,13 @@ const SugarBaby = await ethers.getContractFactory("SugarBaby")
 const sugarbabyInstance = await SugarBaby.attach("INSERT deployed SugarBaby contract address")
 await sugarbabyInstance.executeFlashloan("0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD","1000000000000000000000","INSERT deployed SugarDaddy contract address")
 ```
+## Post-Flash (the 'so what')
+
+A few people asked whether it was possible to trade these collateralized debt positions. The current V2 implementation of the Aave debt tokens are non-transferrable which makes direct ERC20 transfers technically prohibitive, however here is a hypothetical solution around derivatives-based collateralized debt obligations.
+
+![](https://github.com/fifikobayashi/SugarDaddyFlashloan/blob/main/derivatives%20market.png)
+
+
 
 ## Conclusion
 
