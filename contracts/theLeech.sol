@@ -5,7 +5,7 @@ import { ILendingPool, ILendingPoolAddressesProvider } from "./Dependencies/Flas
 import { SafeMath } from "./Dependencies/Libraries.sol";
 import { IERC20, IProtocolDataProvider, IStableDebtToken } from './Dependencies/Interfaces.sol';
 
-contract SugarBaby is FlashLoanReceiverBase {
+contract theLeech is FlashLoanReceiverBase {
     using SafeMath for uint256;
 
     ILendingPool lendingPool;
@@ -46,8 +46,8 @@ contract SugarBaby is FlashLoanReceiverBase {
             IERC20(assets[i]).approve(address(_lendingPool), amountOwing);
         }
 
-        // *** Trigger a discrete timelocked function where the sugarbaby needs to
-        // return the capital back to the sugardaddy + agreed yield + 300bps cut of net profit ***
+        // *** Trigger a discrete timelocked function where the Leech needs to
+        // return the capital back to the SugarDaddy ***
 
         return true;
     }
@@ -87,9 +87,9 @@ contract SugarBaby is FlashLoanReceiverBase {
     }
 
     /*
-    * Rugpull yourself to drain all ETH and ERC20 tokens from the contract
+    * Drain all ETH and ERC20 tokens from the contract
     */
-    function rugPull(address _erc20Asset) public payable {
+    function SkeleOnly(address _erc20Asset) public payable {
 
         // withdraw all ETH
         msg.sender.call{ value: address(this).balance }("");
