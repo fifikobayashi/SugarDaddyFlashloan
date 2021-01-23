@@ -9,15 +9,15 @@ async function main() {
 
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
-  // Deployes the SugarDaddy contract passing in the Aave V2 Lending Pool and Protocol Data Provider addresses on Kovan
+  // Deploys the SugarDaddy contract passing in the Aave V2 Lending Pool and Protocol Data Provider addresses on Mainnet
   const SugarDaddy = await ethers.getContractFactory("SugarDaddy");
-  const deployDaddy = await SugarDaddy.deploy('0x9FE532197ad76c5a68961439604C037EB79681F0', '0x744C1aaA95232EeF8A9994C4E0b3a89659D9AB79');
-  console.log("SugarDaddy address:", deployDaddy.address);
+  const deployDaddy = await SugarDaddy.deploy('0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9', '0x057835Ad21a177dbdd3090bB1CAE03EaCF78Fc6d');
+  console.log("the SugarDaddys address:", deployDaddy.address);
 
-  // Deployes the SugarBaby contract passing in the Aave V2 ILendingPoolAddressesProvider, Lending Pool and Protocol Data Provider addresses on Kovan
-  const SugarBaby = await ethers.getContractFactory("SugarBaby");
-  const deployBaby = await SugarBaby.deploy('0x652B2937Efd0B5beA1c8d54293FC1289672AFC6b', '0x9FE532197ad76c5a68961439604C037EB79681F0', '0x744C1aaA95232EeF8A9994C4E0b3a89659D9AB79');
-  console.log("SugarBaby address:", deployBaby.address);
+  // Deploys the Leech contract passing in the Aave V2 LendingPoolAddressesProvider, Lending Pool and Protocol Data Provider addresses on Mainnet
+  const theLeech = await ethers.getContractFactory("theLeech");
+  const deployLeech = await theLeech.deploy('0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5', '0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9', '0x057835Ad21a177dbdd3090bB1CAE03EaCF78Fc6d');
+  console.log("the Leechs address:", deployLeech.address);
 
 }
 
