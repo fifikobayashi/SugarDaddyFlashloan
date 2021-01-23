@@ -1,13 +1,13 @@
 {
-  "name": "SugarDaddyFlashloan",
-  "version": "0.0.1",
-  "description": "Leverages Aave V2's credit delegation functionalities to execute a V2 flashloan where the repayment of the loan at the end of the Tx is incurred onto a separate entity (the sugardaddy)",
+  "name": "Skeles-IndebtedFlashloans",
+  "version": "0.1.0",
+  "description": "Leverages Aave V2's credit delegation functionalities to execute a V2 flashloan where the repayment of the loan at the end of the Tx is incurred onto a separate entity, AKA the SugarDaddy",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "fifikobayashi",
+  "author": "Skele-Skele",
   "license": "ISC",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.1",
