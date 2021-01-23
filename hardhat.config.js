@@ -6,8 +6,8 @@ module.exports = {
   solidity: "0.6.12",
   networks: {
     kovan: {
-      url: `https://kovan.infura.io/v3/` + process.env.INFURA_PROJECT_ID,
-      accounts: [`0x`+process.env.KOVAN_PRIVATE_KEY]
+      url: process.env.NODE_HTTP_URL,
+      accounts: [`0x`+process.env.MAINNET_PRIVATE_KEY]
     }
   }
 };
