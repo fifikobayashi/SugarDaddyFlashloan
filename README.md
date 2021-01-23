@@ -1,4 +1,4 @@
-# Sugar Daddy Flashloan
+# Indebted Flashloans
 
 ## Overview
 > TLDR: You execute the flash loan, and the obligation to repay the flash debt at the end of the Tx is atomically tokenized onto someone else's contract.
@@ -31,40 +31,15 @@ This function effectively deposits the specified asset into the lending pool, ac
 
 
 ## Getting Started
-I switched from Truffle to Hardhat for this repo so if you haven't used it before have a look at their [quick start tutorial](https://hardhat.org/getting-started).
+It uses Hardhat, not Truffle!
 
-1. git clone https://github.com/fifikobayashi/SugarDaddyFlashloan
-2. Install/configure hardhat
-```
-npm install --save-dev hardhat
-then create your own .env file with your infura ID and Pk
-```
-3. Install dependencies
-```
-npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
-npm install dotenv
-npm install --save truffle-hdwallet-provider
-```
-4. Compile the repo
-```
-npx hardhat compile
-```
-5. Deploy to Kovan
-```
-npx hardhat run scripts/deploy.js --network kovan
-```
-6. Send 4000 DAI to the SugarDaddy contract via metamask or something
-7. Jump onto the kovan testnet
-```
-npx hardhat console --network kovan
-```
-8. Instantiate and configure SugarDaddy by depositing 2000 DAI to the lending pool, activating it as collateral but only approving half of it as debt delegation to Sugar Baby
+1. Instantiate and configure SugarDaddy by depositing 2000 DAI to the lending pool, activating it as collateral but only approving half of it as debt delegation to Sugar Baby
 ```
 const SugarDaddy = await ethers.getContractFactory("SugarDaddy")
 const sugardaddyInstance = await SugarDaddy.attach("INSERT deployed SugarDaddy contract address")
 await sugardaddyInstance.configureSugardaddy("INSERT deployed SugarBaby contract address", "0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD","2000000000000000000000", "0x447a1cC578470cc2EA4450E0b730FD7c69369ff3", "1000000000000000000000")
 ```
-9. Instantiate SugarBaby and execute this non-traditional flashloan by flashing 1000 DAI and incuring the repayment debt onto Sugar Daddy
+2. Instantiate SugarBaby and execute this non-traditional flashloan by flashing 1000 DAI and incuring the repayment debt onto Sugar Daddy
 ```
 const SugarBaby = await ethers.getContractFactory("SugarBaby")
 const sugarbabyInstance = await SugarBaby.attach("INSERT deployed SugarBaby contract address")
@@ -86,11 +61,11 @@ And as with all my samples, call rugPull() to drain all test ETH and tokens from
 
 Anyway, have a go and if you run into any issues just jump on the Aave discord, I'm loitering in there every now and again.
 
-If you've found this useful and would like to send me some gas money:
+Send the OG some Gas Funds:
 
 
 ```
 0xef03254aBC88C81Cb822b5E4DCDf22D55645bCe6
 ```
 
-Thanks, @fifikobayashi.
+^ Thanks, @fifikobayashi. 
