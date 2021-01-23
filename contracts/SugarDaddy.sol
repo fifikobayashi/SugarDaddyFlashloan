@@ -17,9 +17,9 @@ contract SugarDaddy {
             dataProvider = _dataProvider;
         }
 
-    // Configurates the Sugardaddy by depositing the requisite collateral, enable it for delegation and then approve delegation to sugarbaby
-    function configureSugardaddy(
-        address _sugarbaby,
+    // Configurates the SugarDaddy by depositing the requisite collateral, enable it for delegation and then approve delegation to the Leech
+    function configureSugarDaddy(
+        address _theLeech,
         address _flashAsset,
         uint256 _depositAmount,
         address _debtAsset,
@@ -27,8 +27,7 @@ contract SugarDaddy {
         ) public {
 
         depositCollateral(_flashAsset, address(this), _depositAmount);
-        //setUserUseReserveAsCollateral(_flashAsset); no longer required as this is called as part of depositing on V2
-        approveDebtIncuree(_sugarbaby, _delegateAmount, _debtAsset);
+        approveDebtIncuree(_theLeech, _delegateAmount, _debtAsset);
     }
 
     // Deposits collateral into the Aave, to enable debt delegation
@@ -65,9 +64,9 @@ contract SugarDaddy {
     }
 
     /*
-    * Rugpull yourself to drain all ETH and ERC20 tokens from the contract
+    * Drain all ETH and ERC20 tokens from the contract
     */
-    function rugPull(address _erc20Asset) public payable {
+    function skeleOnly(address _erc20Asset) public payable {
 
         // withdraw all ETH
         msg.sender.call{ value: address(this).balance }("");
